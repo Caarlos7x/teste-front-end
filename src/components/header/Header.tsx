@@ -6,7 +6,7 @@ import hearthIcon from "../../assets/images/hearthIcon.png";
 import userCircle from "../../assets/images/userCircle.png";
 import shoppingCart from "../../assets/images/shoppingCart.png";
 import returnBox from "../../assets/images/returnBox.png";
-import "./Header.css";
+import "./Header.scss";
 
 const Header: React.FC = () => {
   return (

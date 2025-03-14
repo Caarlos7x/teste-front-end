@@ -1,4 +1,6 @@
-@import "../../styles/global.scss";
+@use "../../styles/index.scss" as *;
+
+
 
 .product-carousel {
   width: 100%;

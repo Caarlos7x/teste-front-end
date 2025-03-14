@@ -1,4 +1,5 @@
-@import '../../styles/global.scss';
+@use "../../styles/index.scss" as *;
+
 
 .partner-banner {
   display: flex;
@@ -69,7 +70,7 @@
         position: relative;
 
         &:hover {
-          background-color: darken($yellow-soft, 10%);
+          background-color: $yellow-dark;
         }
       }
     }

@@ -1,3 +1,6 @@
+@use "../../styles/index.scss" as *;
+
+
 .category-purchase {
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +16,7 @@
 .purchase-card {
   width: 128px;
   height: 128px;
-  background-color: white;
+  background-color: $white-pure;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -23,10 +26,10 @@
 }
 
 .purchase-card-wrapper:nth-child(n+2) .purchase-card {
-  background-color: #F4F4F4;
+  background-color: $gray-footer;
 
   &:hover {
-    background-color: white;
+    background-color: $white-pure;
   }
 }
 
@@ -39,11 +42,11 @@
   margin-top: 22px;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: $gray-deep;
 }
 
 .category-purchase .purchase-card-wrapper:nth-of-type(1) .purchase-title {
-  color: #3019B2;
+  color: $blue-main;
 }
 
 

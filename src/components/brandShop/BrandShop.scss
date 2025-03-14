@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@use "../../styles/index.scss" as *;
 
 .brand-shop {
   display: flex;
@@ -39,6 +39,12 @@
     align-items: center;
     background-color: $white-pure;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     img {
       width: 80%;

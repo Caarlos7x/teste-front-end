@@ -1,4 +1,4 @@
-@import '../../styles/global.scss';
+@use "../../styles/index.scss" as *;
 
 .newsletter-footer {
   display: flex;
@@ -16,7 +16,7 @@
     color: $white-pure;
     padding: 40px 22px 40px 40px;
   }
-  
+
   .newsletter-footer__column-1 {
     flex: 1;
     h2 {
@@ -29,19 +29,19 @@
       line-height: 1.5;
     }
   }
-  
+
   .newsletter-footer__column-2 {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .newsletter-form {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-  
+
     input {
       width: 233px;
       padding: 12px;
@@ -53,7 +53,7 @@
       transition: all 0.3s ease;
     }
   }
-  
+
   .newsletter-form button {
     width: 157px;
     height: 42px;
@@ -67,17 +67,17 @@
     font-weight: 700;
     transition: background-color 0.3s ease;
   }
-  
+
   .newsletter-form button:hover {
-    background-color: darken($yellow-soft, 10%);
+    background-color: $yellow-dark;
   }
-  
+
   .terms-checkbox {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
     color: $white-pure;
-  
+
     input {
       margin-right: 5px;
     }
@@ -89,7 +89,7 @@
     flex-direction: column;
     align-items: center;
     background-color: $gray-footer;
-    
+
     .footer-content {
       width: 1440px;
       max-width: none;
@@ -97,59 +97,67 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 61.5px 80px; 
+      padding: 61.5px 80px;
     }
-  
+
     .footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 90px;
+      border-right: 2px solid $gray-light;
+
       img {
         width: 167px;
         height: 48px;
       }
+
       p {
         font-size: 0.9rem;
         color: $gray-soft;
         margin-top: 10px;
       }
+
       .social-icons {
         display: flex;
         gap: 10px;
         margin-top: 27px;
         margin-bottom: 62px;
-        
+
         img {
-          width: 24px; 
+          width: 24px;
           height: 24px;
           cursor: pointer;
         }
       }
     }
-  
+
     .footer-links {
       max-width: 800px;
       display: flex;
       flex: 1;
       justify-content: space-between;
       gap: 100px;
-      
+
       .footer-links-column {
         h3 {
           font-size: 1rem;
           font-weight: bold;
           margin-bottom: 10px;
         }
-        
+
         ul {
           list-style: none;
           padding: 0;
           margin: 0;
-  
+
           li {
             font-size: 0.9rem;
             color: $gray-soft;
             margin-bottom: 8px;
             cursor: pointer;
             transition: color 0.3s ease;
-  
+
             &:hover {
               color: $black-pure;
             }
@@ -169,4 +177,8 @@
     background-color: $white-pure;
   }
 
+  a {
+    text-decoration: none;
+    color: $gray-soft;
+  }
 }

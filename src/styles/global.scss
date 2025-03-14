@@ -1,5 +1,6 @@
 $blue-main: #3442b5;
 $yellow-soft: #f7ca11;
+$yellow-dark: #f6c400;
 $purple-dark: #271c47;
 $gray-soft: #9f9f9f;
 $gray-light: #e5e5e5;
@@ -104,7 +105,7 @@ body {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($yellow-soft, 10%);
+    background-color: $yellow-dark;
   }
 }
 

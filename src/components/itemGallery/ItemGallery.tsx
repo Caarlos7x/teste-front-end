@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import previousBtn from "../../assets/images/previousBtn.png";
 import nextBtn from "../../assets/images/nextBtn.png";
 import ProductModal from "../modal/ProductModal";
@@ -13,38 +13,17 @@ interface Product {
   description: string;
 }
 
-const mockProducts: Product[] = [
-  {
-    id: 1,
-    image: "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-    title: "iPhone 11 Pro Max Branco",
-    price: 15000,
-    oldPrice: 16000,
-    description: "Descrição do produto"
-  },
-  {
-    id: 2,
-    image: "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-    title: "iPhone 13 Mini",
-    price: 9000,
-    description: "Descrição do produto"
-  },
-  {
-    id: 3,
-    image: "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-    title: "iPhone 11 Pro Max Branco",
-    price: 14990,
-    oldPrice: 15500,
-    description: "Descrição do produto"
-  },
-  {
-    id: 4,
-    image: "https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png",
-    title: "iPhone 13 Mini",
-    price: 12000,
-    description: "Descrição do produto"
-  },
-];
+interface ApiProduct {
+  productName: string;
+  descriptionShort: string;
+  photo: string;
+  price: number;
+}
+
+interface ApiResponse {
+  success: boolean;
+  products: ApiProduct[];
+}
 
 const categories = ["CELULAR", "ACESSÓRIOS", "TABLETS", "NOTEBOOKS", "TVS", "VER TODOS"];
 
@@ -53,7 +32,31 @@ const ProductCarousel: React.FC = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [products, setProducts] = useState<Product[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('/teste-front-end/junior/tecnologia/lista-produtos/produtos.json');
+      const data: ApiResponse = await response.json();
+      if (data.success) {
+        const fetchedProducts: Product[] = data.products.map((product, index) => ({
+          id: index + 1,
+          image: product.photo,
+          title: product.productName,
+          price: product.price,
+          description: product.descriptionShort,
+        }));
+        setProducts(fetchedProducts);
+      }
+    } catch (error) {
+      console.error("Erro ao buscar produtos:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const handleScroll = (direction: "left" | "right"): void => {
     if (!containerRef.current) return;
@@ -111,7 +114,7 @@ const ProductCarousel: React.FC = () => {
         </button>
 
         <div ref={containerRef} className="product-carousel__scroll-container">
-          {mockProducts.map((product) => (
+          {products.map((product) => (
             <div
               key={product.id}
               className="product-card"
