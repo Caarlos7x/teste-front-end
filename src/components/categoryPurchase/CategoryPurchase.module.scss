@@ -1,0 +1,51 @@
+.category-purchase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  justify-content: center;
+  margin-top: 39px;
+}
+
+.purchase-card-wrapper {
+  text-align: center;
+}
+
+.purchase-card {
+  width: 128px;
+  height: 128px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.purchase-card-wrapper:nth-child(n+2) .purchase-card {
+  background-color: #F4F4F4;
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.purchase-icon img {
+  width: 64px;
+  height: 64px;
+}
+
+.purchase-title {
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-purchase .purchase-card-wrapper:nth-of-type(1) .purchase-title {
+  color: #3019B2;
+}
+
+
+
+
