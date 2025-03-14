@@ -1,6 +1,3 @@
-// ==============================
-// 🔹 Variáveis Globais
-// ==============================
 $blue-main: #3442b5;
 $yellow-soft: #f7ca11;
 $purple-dark: #271c47;
@@ -13,9 +10,6 @@ $black-pure: #000000;
 
 $font-primary: "Poppins", sans-serif;
 
-// ==============================
-// 🔹 Reset e Configuração Global
-// ==============================
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-// ==============================
-// 🔹 Container Responsivo
-// ==============================
 .container {
   width: 100%;
   max-width: 1440px;
@@ -47,9 +38,6 @@ body {
   align-items: center;
 }
 
-// ==============================
-// 🔹 Hero Section
-// ==============================
 .hero-wrapper {
   width: 100%;
   max-width: 1440px;
@@ -103,9 +91,6 @@ body {
   }
 }
 
-// ==============================
-// 🔹 Botão Padrão
-// ==============================
 .hero-button {
   background-color: $yellow-soft;
   color: $purple-dark;
@@ -123,16 +108,10 @@ body {
   }
 }
 
-// ==============================
-// 🔹 Seções de conteúdo (Margin entre as seções)
-// ==============================
 .section-wrapper {
   margin-bottom: 90px;
 }
 
-// ==============================
-// 🔹 Responsividade
-// ==============================
 @media (max-width: 1024px) {
   .container {
     max-width: 100%;

@@ -11,7 +11,6 @@ import "./Header.css";
 const Header: React.FC = () => {
   return (
     <header className="header">
-      {/* Primeira Linha */}
       <div className="header-top">
         <div className="center-content">
           <h3 className="h-1">
@@ -31,7 +30,6 @@ const Header: React.FC = () => {
 
       <div className="horizon-line" />
 
-      {/* Segunda Linha */}
       <div className="header-middle">
         <img src={econverseLogo} alt="Logo Econverse" className="logo" />
         <div className="search-container">
@@ -60,7 +58,6 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Terceira Linha (Menu) */}
       <nav className="header-bottom">
         <a href="#" className="nav-link">Todas Categorias</a>
         <a href="#" className="nav-link">Supermercado</a>
