@@ -1,0 +1,62 @@
+@import '../../styles/global.scss';
+
+.brand-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+
+  &__title {
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $blue-main;
+    }
+  }
+
+  &__column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__circleBrand {
+    display: flex;
+    gap: 2.62rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  &__circle {
+    width: 211px;
+    height: 211px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-pure;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .brand-shop__circleBrand {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .brand-shop__circle {
+    width: 80px;
+    height: 80px;
+  }
+}

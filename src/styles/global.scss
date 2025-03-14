@@ -1,0 +1,166 @@
+// ==============================
+// 🔹 Variáveis Globais
+// ==============================
+$blue-main: #3442b5;
+$yellow-soft: #f7ca11;
+$purple-dark: #271c47;
+$gray-soft: #9f9f9f;
+$gray-light: #e5e5e5;
+$gray-footer: #f4f4f4;
+$gray-deep: #3f3f40;
+$white-pure: #ffffff;
+$black-pure: #000000;
+
+$font-primary: "Poppins", sans-serif;
+
+// ==============================
+// 🔹 Reset e Configuração Global
+// ==============================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $white-pure;
+  color: $gray-deep;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// ==============================
+// 🔹 Container Responsivo
+// ==============================
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// ==============================
+// 🔹 Hero Section
+// ==============================
+.hero-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
+
+  &__hero {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-bottom: 10px;
+  color: $white-pure;
+}
+
+.hero-subtitle {
+  font-size: 32px;
+  color: $white-pure;
+
+  span {
+    color: $yellow-soft;
+    font-weight: bold;
+  }
+}
+
+// ==============================
+// 🔹 Botão Padrão
+// ==============================
+.hero-button {
+  background-color: $yellow-soft;
+  color: $purple-dark;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($yellow-soft, 10%);
+  }
+}
+
+// ==============================
+// 🔹 Seções de conteúdo (Margin entre as seções)
+// ==============================
+.section-wrapper {
+  margin-bottom: 90px;
+}
+
+// ==============================
+// 🔹 Responsividade
+// ==============================
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    height: 300px;
+    padding-left: 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
