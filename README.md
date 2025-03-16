@@ -55,19 +55,43 @@ Os arquivos otimizados para produção serão gerados na pasta `build/`.
 
 ```plaintext
 src/
-│
-├── assets/                  # Imagens e arquivos estáticos
-│
-├── components/              # Componentes React
-│   ├── ProductCard.tsx      # Componente para exibição de produto
-│   └── ProductModal.tsx     # Componente de modal com detalhes do produto
-│
-├── styles/                  # Estilos do projeto
-│   └── ProductModal.scss    # Estilos específicos para o modal de produto
-│
-├── App.tsx                  # Componente principal do React
-├── index.tsx                # Ponto de entrada do React
-└── tsconfig.json            # Configuração do TypeScript
+├── assets/
+├── components/
+│   ├── brandShop/
+│   │   ├── BrandShop.scss
+│   │   └── BrandShop.tsx
+│   ├── categoryPurchase/
+│   │   ├── CategoryPurchase.module.scss
+│   │   └── CategoryPurchase.tsx
+│   ├── header/
+│   │   ├── Header.scss
+│   │   └── Header.tsx
+│   ├── itemGallery/
+│   │   ├── ItemGallery.scss
+│   │   └── ItemGallery.tsx
+│   ├── itemGallery-2/
+│   │   ├── ItemGallery-2.scss
+│   │   └── ItemGallery-2.tsx
+│   ├── modal/
+│   │   ├── ProductModal.scss
+│   │   └── ProductModal.tsx
+│   ├── newsLetter-Footer/
+│   │   ├── newsletterFooter.scss
+│   │   └── newsletterFooter.tsx
+│   ├── partnerBanner/
+│   │   ├── PartnerBanner.scss
+│   │   └── PartnerBanner.tsx
+├── pages/
+│   └── Home.tsx
+├── styles/
+│   ├── global.scss
+│   └── index.scss
+├── types/
+├── App.css
+├── App.tsx
+├── index.css
+├── main.tsx
+└── vite-env.d.ts
 ```
 
 ### Como os Produtos São Consumidos
