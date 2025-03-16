@@ -28,7 +28,7 @@
     right: 29px;
     border: none;
     background: none;
-    font-size: 1.5em;
+    font-size: 24px;
     color: $gray-soft;
     cursor: pointer;
   }
@@ -47,17 +47,17 @@
   }
 
   &__title {
-    font-size: 1.5em;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 
   &__price {
-    font-size: 1.2em;
+    font-size: 19px;
     margin-bottom: 10px;
   }
 
   &__description {
-    font-size: 0.9em;
+    font-size: 14px;
     color: $gray-soft;
     margin-bottom: 20px;
   }
@@ -65,7 +65,7 @@
   &__link {
     color: $blue-main;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 14px;
     display: block;
     margin-bottom: 20px;
   }
@@ -96,7 +96,7 @@
 
   &__buy {
     background-color: $yellow-soft;
-    font-size: .87rem;
+    font-size: 14px;
     font-weight: 700;
     color: $black-pure;
     padding: 10px 20px;

@@ -15,7 +15,7 @@ const categories = [
   { id: 3, name: 'Bebidas', Icon: DrinksIcon },
   { id: 4, name: 'Ferramentas', Icon: ToolsIcon },
   { id: 5, name: 'Saúde', Icon: HealthIcon },
-  { id: 6, name: 'Esporte e Fitness', Icon: FitnessIcon },
+  { id: 6, name: 'Esportes e Fitness', Icon: FitnessIcon },
   { id: 7, name: 'Moda', Icon: FashionIcon },
 ];
 

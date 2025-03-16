@@ -1,6 +1,5 @@
 @use "../../styles/index.scss" as *;
 
-
 .category-purchase {
   display: flex;
   flex-wrap: wrap;
@@ -41,14 +40,10 @@
 .purchase-title {
   margin-top: 22px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: $gray-deep;
 }
 
 .category-purchase .purchase-card-wrapper:nth-of-type(1) .purchase-title {
   color: $blue-main;
 }
-
-
-
-

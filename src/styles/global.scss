@@ -1,4 +1,5 @@
 $blue-main: #3442b5;
+$blue-soft: #606fe3;
 $yellow-soft: #f7ca11;
 $yellow-dark: #f6c400;
 $purple-dark: #271c47;
@@ -18,7 +19,7 @@ $font-primary: "Poppins", sans-serif;
 }
 
 body {
-  font-family: $font-primary;
+  font-family: $font-primary !important;
   background-color: $white-pure;
   color: $gray-deep;
   display: flex;

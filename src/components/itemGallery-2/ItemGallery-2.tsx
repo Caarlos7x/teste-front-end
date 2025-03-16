@@ -9,6 +9,7 @@ interface Product {
   image: string;
   title: string;
   price: number;
+  formattedPrice: string;
   oldPrice?: number;
   description: string;
 }
@@ -42,6 +43,10 @@ const ProductCarousel: React.FC = () => {
           image: product.photo,
           title: product.productName,
           price: product.price,
+          formattedPrice: product.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          }),
           description: product.descriptionShort,
         }));
         setProducts(fetchedProducts);
@@ -93,30 +98,35 @@ const ProductCarousel: React.FC = () => {
         </button>
 
         <div ref={containerRef} className="product-carousel__scroll-container">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="product-card"
-              onClick={() => openModal(product)}
-            >
-              <img
-                src={product.image}
-                alt={`Imagem do produto ${product.title}`}
-                className="product-card__image"
-                loading="lazy"
-              />
-              <p className="product-card__title">{product.title}</p>
-              {product.oldPrice && (
-                <p className="product-card__old-price">R$ {product.oldPrice}</p>
-              )}
-              <p className="product-card__price">R$ {product.price}</p>
-              <p className="product-card__installments">
-                ou 2x de R$ {(product.price / 2).toFixed(2)} sem juros
-              </p>
-              <p className="product-card__free-shipping">Frete grátis</p>
-              <button className="product-card__buy-button">COMPRAR</button>
-            </div>
-          ))}
+          {products.slice(0, 4).map((product) => {
+            const installmentPrice = (product.price / 2).toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            });
+
+            return (
+              <div
+                key={product.id}
+                className="product-card"
+                onClick={() => openModal(product)}
+              >
+                <img
+                  src={product.image}
+                  alt={`Imagem do produto ${product.title}`}
+                  className="product-card__image"
+                  loading="lazy"
+                />
+                <p className="product-card__title">{product.title}</p>
+                {product.oldPrice && (
+                  <p className="product-card__old-price">R$ {product.oldPrice}</p>
+                )}
+                <p className="product-card__price">{product.formattedPrice}</p>
+                <p className="product-card__installments">ou 2x de {installmentPrice} sem juros</p>
+                <p className="product-card__free-shipping">Frete grátis</p>
+                <button className="product-card__buy-button">COMPRAR</button>
+              </div>
+            );
+          })}
         </div>
 
         <button
@@ -133,7 +143,7 @@ const ProductCarousel: React.FC = () => {
         onClose={closeModal}
         productImage={selectedProduct?.image || ""}
         productTitle={selectedProduct?.title || ""}
-        productPrice={`R$ ${selectedProduct?.price || 0}`}
+        productPrice={selectedProduct?.formattedPrice || "R$ 0,00"}
         productDescription={selectedProduct?.description || ""}
       />
     </section>

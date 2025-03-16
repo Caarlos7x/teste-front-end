@@ -1,9 +1,8 @@
 @use "../../styles/index.scss" as *;
 
-
 .partner-banner {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 
@@ -40,30 +39,31 @@
       transform: translateY(-50%);
       text-align: left;
       color: $white-pure;
-      padding: 1rem;
+      padding: 16px;
       width: auto;
       max-width: 400px;
       z-index: 2;
 
       .partner-banner__title {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 24px;
+        margin-bottom: 8px;
         font-weight: bold;
       }
 
       .partner-banner__description {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 16px;
+        margin-bottom: 16px;
       }
 
       .partner-banner__button {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
         background-color: $yellow-soft;
         color: $purple-dark;
         font-weight: 700;
         border: none;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
         transition: background-color 0.3s;
         z-index: 3;

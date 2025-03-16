@@ -1,11 +1,9 @@
 @use "../../styles/index.scss" as *;
 
-
-
 .product-carousel {
   width: 100%;
   max-width: 1440px;
-  margin: 2.5rem auto;
+  margin: 40px auto;
   overflow: hidden;
   padding: 0 20px;
   box-sizing: border-box;
@@ -15,7 +13,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.87rem;
+    font-size: 30px;
     font-weight: bold;
     color: $blue-main;
     gap: 10px;
@@ -40,26 +38,26 @@
       margin: 0 auto;
       border: 1px solid $gray-light;
     }
-  
+
     li {
       padding: 0;
       text-align: center;
       border-right: 1px solid $gray-light;
-  
+
       &:last-child {
         border-right: none;
       }
-  
+
       &:first-child {
         font-weight: 700;
-  
+
         .category-button {
           color: $blue-main;
           font-weight: 800;
         }
       }
     }
-  
+
     .category-button {
       width: 100%;
       padding: 10px;
@@ -72,7 +70,7 @@
 
   &__carousel {
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: 24px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -111,11 +109,11 @@
 
   .product-carousel__scroll-container {
     display: flex;
-    gap: 1.12rem;
+    gap: 18px;
     overflow-x: auto;
     scroll-behavior: smooth;
     max-width: calc(100% - 20px);
-    padding: 0 10px;
+    padding: 0 10px 5px 10px !important;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -133,65 +131,68 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    border-radius: 1rem;
+    border-radius: 16px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 16px;
     background-color: white;
     text-align: left;
     cursor: pointer;
 
     &__image {
-      width: 100%;
+      width: 90% !important;
       height: 200px;
+      margin: 0 auto;
       object-fit: cover;
-      border-radius: 0.5rem;
+      border-radius: 8px;
     }
 
     &__title {
-      font-size: 0.93rem;
-      margin-top: 0.5rem;
+      font-size: 15px;
+      margin-top: 8px;
       text-align: left;
+      text-transform: uppercase;
     }
 
     &__old-price {
-      font-size: 1rem;
+      font-size: 16px;
       color: #9ca3af;
       text-decoration: line-through;
       text-align: left;
     }
 
     &__price {
-      font-size: 1.25rem;
+      font-size: 20px;
       font-weight: bold;
       text-align: left;
     }
 
     &__installments {
-      font-size: 0.93rem;
-      color: #6b7280;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      color: $gray-deep !important;
       text-align: left;
     }
 
     &__free-shipping {
-      font-size: 0.93rem;
+      font-size: 15px;
       text-align: left;
-      color: #3442b5;
+      color: $blue-main;
       font-weight: 600;
     }
 
     &__buy-button {
       width: 100%;
-      background-color: #3442b5;
-      color: white;
-      padding: 0.75rem;
-      border-radius: 0.25rem;
+      background-color: $blue-main;
+      color: $white-pure;
+      padding: 12px;
+      border-radius: 4px;
       font-weight: 700;
-      font-size: 0.87rem;
+      font-size: 14px;
       cursor: pointer;
       border: none;
 
       &:hover {
-        background-color: #1d4ed8;
+        background-color: $blue-soft;
       }
     }
   }

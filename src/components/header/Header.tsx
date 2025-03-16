@@ -3,8 +3,11 @@ import econverseLogo from "../../assets/images/econverse-logo.png";
 import checkIcon from "../../assets/images/checkIcon.png";
 import searchIcon from "../../assets/images/searchIcon.png";
 import hearthIcon from "../../assets/images/hearthIcon.png";
+import freeShipiing from "../../assets/images/freeShipping.png";
+import creditCard from "../../assets/images/creditCard.png";
 import userCircle from "../../assets/images/userCircle.png";
 import shoppingCart from "../../assets/images/shoppingCart.png";
+import crowIcon from "../../assets/images/crowIcon.png";
 import returnBox from "../../assets/images/returnBox.png";
 import "./Header.scss";
 
@@ -18,11 +21,11 @@ const Header: React.FC = () => {
             Compra <span>100% segura</span>
           </h3>
           <h3 className="h-1">
-            <img src={checkIcon} alt="Ícone de Verificação" />
-            <span>Frete</span> grátis acima de R$ 200
+            <img src={freeShipiing} alt="Ícone de Verificação" />
+            <span>Frete grátis</span> acima de R$ 200
           </h3>
           <h3 className="h-1">
-            <img src={checkIcon} alt="Ícone de Verificação" />
+            <img src={creditCard} alt="Ícone de Verificação" />
             <span>Parcele</span> suas compras
           </h3>
         </div>
@@ -63,9 +66,11 @@ const Header: React.FC = () => {
         <a href="#" className="nav-link">Supermercado</a>
         <a href="#" className="nav-link">Livros</a>
         <a href="#" className="nav-link">Moda</a>
-        <a href="#" className="nav-link">Lançamentos</a>
         <a href="#" className="nav-link isSelected">Ofertas do Dia</a>
-        <a href="#" className="nav-link">Assinatura</a>
+        <a href="#" className="nav-link">
+          <img src={crowIcon} alt="Ícone de Assinatura" className="icon" />
+          Assinatura
+        </a>
       </nav>
     </header>
   );

@@ -53,11 +53,9 @@ const Home: React.FC = () => {
         <ItemGallery2 />
       </SectionWrapper>
 
-      <SectionWrapper>
-        <footer>
-          <NewsletterFooter />
-        </footer>
-      </SectionWrapper>
+      <footer>
+        <NewsletterFooter />
+      </footer>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const PartnerBanner: React.FC = () => {
         <img src={partnerBanner} alt="Imagem de computadores Apple" />
         <div className="partner-banner__overlay">
           <h2 className="partner-banner__title">Parceiros</h2>
-          <p className="partner-banner__description">Lorem ipsum dolor sit amet, consectetur</p>
+          <p className="partner-banner__description">Lorem ipsum dolor sit <br /> amet, consectetur</p>
           <button className="partner-banner__button">CONFIRA</button>
         </div>
       </div>
@@ -18,7 +18,7 @@ const PartnerBanner: React.FC = () => {
         <img src={partnerBanner} alt="Imagem de computadores Apple" />
         <div className="partner-banner__overlay">
           <h2 className="partner-banner__title">Parceiros</h2>
-          <p className="partner-banner__description">Lorem ipsum dolor sit amet, consectetur</p>
+          <p className="partner-banner__description">Lorem ipsum dolor sit <br /> amet, consectetur</p>
           <button className="partner-banner__button">CONFIRA</button>
         </div>
       </div>

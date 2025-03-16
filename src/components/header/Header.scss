@@ -60,7 +60,7 @@ body {
   max-width: 1280px;
   height: 1px;
   background-color: $gray-light;
-  margin: 10px auto;
+  margin: 6px auto 12px;
 }
 
 .header-middle {
@@ -87,13 +87,19 @@ body {
   padding: 0 40px 0 12px;
   border: 1px solid $black-pure;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
   background-color: $gray-light;
+}
+
+.search-container input::placeholder {
+  color: $gray-soft;
+  opacity: 1;
 }
 
 .search-icon {
   position: absolute;
-  right: 10px;
+  right: 24px;
   top: 50%;
   transform: translateY(-50%);
   width: 28px;
@@ -150,14 +156,24 @@ body {
   gap: 20px;
   padding: 10px 0;
   font-weight: bold;
+  text-transform: uppercase;
   background-color: $white-pure;
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: $gray-soft;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 12px;
   padding: 10px 15px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 12px 0 0;
 }
 
 .nav-link:hover {
